@@ -1,0 +1,19 @@
+<div class="partner">
+  <div class="partner-header">
+    <h2 class="h2">
+      <span>our big&nbsp;</span>
+      <span class="text-primary fw-bold">partners</span>
+      <span>&nbsp;we work with</span>
+    </h2>
+  </div>
+  <div class="partner-content">
+    <ng-container *ngFor="let partner of partners; let partnerIndex = index">
+      <div class="partner-content__{{ partnerIndex + 1 }}">
+        <img
+          src="assets/vendors/{{ partner.name }}.{{ partner.img_ext }}"
+          alt="{{ partner.name }}"
+        />
+      </div>
+    </ng-container>
+  </div>
+</div>
