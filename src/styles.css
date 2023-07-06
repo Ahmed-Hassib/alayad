@@ -1,1 +1,52 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Cairo&display=swap");
+
+/* root variables */
+:root {
+  --primary-color: #ce2828;
+  --secondary-color: #8b0808;
+  --white-color: #ffffff;
+  --black-color: #333333;
+  --gray-color: #c8c8c8;
+}
+
+/* for all elements */
+* {
+  box-sizing: border-box;
+  font-family: "Cairo", sans-serif;
+}
+
+/* buttons style */
+.btn {
+  border-radius: 0;
+}
+
+.btn:hover {
+  color: var(--primary-color) !important;
+  background-color: var(--white-color) !important;
+}
+
+.btn-primary {
+  color: var(--white-color) !important;
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+}
+
+/* background style */
+.bg-primary {
+  background-color: var(--primary-color) !important;
+}
+
+.bg-secondary {
+  background-color: var(--secondary-color) !important;
+}
+
+
+/* text style */
+.text-primary {
+  color: var(--primary-color) !important;
+}
+
+.text-secondary {
+  color: var(--secondary-color) !important;
+}
