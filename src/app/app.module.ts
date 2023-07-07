@@ -11,6 +11,9 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { BannerComponent } from './banner/banner.component';
 import { StatisticsComponent } from './statistics/statistics.component';
 import { PartnersComponent } from './partners/partners.component';
+import { ProblemsComponent } from './problems/problems.component';
+import { SolutionsComponent } from './solutions/solutions.component';
+import { WhyUsComponent } from './why-us/why-us.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +26,9 @@ import { PartnersComponent } from './partners/partners.component';
     BannerComponent,
     StatisticsComponent,
     PartnersComponent,
+    ProblemsComponent,
+    SolutionsComponent,
+    WhyUsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
