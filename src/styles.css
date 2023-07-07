@@ -4,7 +4,7 @@
 /* root variables */
 :root {
   --primary-color: #ce2828;
-  --secondary-color: #8b0808;
+  --secondary-color: #770808;
   --white-color: #ffffff;
   --black-color: #333333;
   --gray-color: #c8c8c8;
@@ -32,6 +32,12 @@
   border-color: var(--primary-color) !important;
 }
 
+.btn-outline-white {
+  color: var(--white-color) !important;
+  background-color: unset;
+  border-color: var(--white-color) !important;
+}
+
 /* background style */
 .bg-primary {
   background-color: var(--primary-color) !important;
@@ -49,4 +55,8 @@
 
 .text-secondary {
   color: var(--secondary-color) !important;
+}
+
+h2 {
+  font-size: 3rem!important;
 }
