@@ -1,4 +1,4 @@
-.statistics,
+.statistics > .container,
 .statistics-content {
   display: grid;
   align-items: center;
