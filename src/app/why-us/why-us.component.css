@@ -1,0 +1,33 @@
+.why-us {
+  margin: 4rem auto;
+}
+
+.why-us__content {
+  margin: 5rem auto 0;
+  position: relative;
+  grid-template-columns: repeat(3, 1fr);
+  display: grid;
+  gap: 30px;
+}
+
+@media (max-width: 960px) {
+  .why-us__content {
+    grid-template-columns: repeat(1, 1fr);
+    text-align: center;
+  }
+}
+
+.why-us__content__reason {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: 50px 50px;
+}
+
+.why-us__content__reason .why-us__content__reason__icon svg {
+  width: 40px;
+}
+
+.why-us__content__reason .why-us__content__reason__parag .lead {
+  font-size: 1rem;
+}
