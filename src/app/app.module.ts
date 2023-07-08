@@ -14,6 +14,7 @@ import { PartnersComponent } from './partners/partners.component';
 import { ProblemsComponent } from './problems/problems.component';
 import { SolutionsComponent } from './solutions/solutions.component';
 import { WhyUsComponent } from './why-us/why-us.component';
+import { CustomersComponent } from './customers/customers.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { WhyUsComponent } from './why-us/why-us.component';
     ProblemsComponent,
     SolutionsComponent,
     WhyUsComponent,
+    CustomersComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
