@@ -1,0 +1,96 @@
+footer {
+  margin-top: 7rem;
+  background-color: var(--secondary-color);
+  min-width: 100px;
+  color: var(--white-color);
+}
+
+footer .footer__content {
+  padding: 6rem 0 3rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 960px) {
+  footer .footer__content {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 100px;
+  }
+}
+
+footer a {
+  color: var(--white-color);
+}
+
+.footer__info {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 50px;
+}
+
+.footer__info__contact {
+  display: grid;
+  grid-template-columns: 10% 90%;
+  gap: 40px;
+}
+
+.footer__info__contact__icon {
+  padding: 15px;
+  text-align: center;
+  background: #fff;
+  color: var(--secondary-color);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 20px;
+}
+
+.footer__info__contact__details {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.footer__info__contact__details span:first-child {
+  font-weight: 700;
+  letter-spacing: 5px;
+  font-size: 20px;
+}
+
+.footer__form__header {
+  margin-bottom: 2rem;
+}
+
+.footer__form__header__parag {
+  letter-spacing: 3px;
+}
+
+form {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+}
+
+form > button[type="submit"] {
+  width: 150px;
+  border-radius: 16px;
+}
+
+.footer__copy-right {
+  margin-top: 3rem;
+  padding: 1rem 0;
+  width: 100%;
+  text-align: center;
+}
+
+.footer__copy-right__statement {
+  font-size: 12px;
+}
+
+.footer__copy-right__brand-name {
+  font-size: 10px;
+}
+
+.footer__copy-right__brand-img {
+  margin-top: 1rem;
+}
