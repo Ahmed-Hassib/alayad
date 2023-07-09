@@ -46,32 +46,24 @@
           </a>
           <ul class="dropdown-menu">
             <li>
-              <a
+              <button
                 class="dropdown-item"
-                href="assets/files/Catalouge.pdf"
-                download
+                (click)="downloadMedia('assets/files/Catalouge.pdf')"
               >
                 <i class="bi bi-download"></i>
-                Download Catalogue</a
-              >
+                Download Catalogue
+              </button>
             </li>
           </ul>
         </li>
         <li class="nav-item">
-          <a
-            class="nav-link"
-            aria-current="page"
-            routerLink="offers"
-            routerLinkActive="active"
-            ariaCurrentWhenActive="page"
-            [routerLinkActiveOptions]="{ exact: true }"
-            >offers</a
-          >
+          <a class="nav-link" aria-current="page" href="#why-us">Offers</a>
         </li>
       </ul>
       <div>
-        <!-- <a routerLink="contact-us" class="btn btn-primary nav-contact-us">Contact Us</a> -->
-        <a href="#footer" class="btn btn-primary nav-contact-us">Contact Us</a>
+        <a href="#contact-us" class="btn btn-primary nav-contact-us"
+          >Contact Us</a
+        >
       </div>
     </div>
   </div>
