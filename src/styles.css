@@ -4,14 +4,19 @@
 /* root variables */
 :root {
   --primary-color: #ce2828;
-  --secondary-color: #770808;
+  /* --secondary-color: #770808; */
+  --secondary-color: #0072bc;
   --white-color: #ffffff;
   --black-color: #333333;
   --gray-color: #c8c8c8;
+  --facebook-color: #3b5998;
+  --whatsapp-color: #25D366;
 }
 
 /* for all elements */
 * {
+  -webkit-box-sizing: -webkit-border-box;
+  -moz-box-sizing: -moz-border-box;
   box-sizing: border-box;
   font-family: "Cairo", sans-serif;
 }
