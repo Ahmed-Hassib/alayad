@@ -9,7 +9,11 @@
   gap: 20px;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
+  .banner {
+    margin: 3rem auto;
+  }
+  
   .banner > .container {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -20,11 +24,18 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+.banner-section__image {
+  position: relative;
+  overflow: hidden;
+}
+
 .banner-image {
   width: 820px;
   height: 436px;
   max-width: 100%;
   border: 1px solid var(--black-color);
+  scale: 2.5;
 }
 
 .btn-banner {
