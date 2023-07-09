@@ -1,7 +1,7 @@
 .problems {
   margin: 3rem auto;
   padding: 4rem 0;
-  background: linear-gradient(90deg, var(--secondary-color) 50%, var(--primary-color) 80%);
+  background: linear-gradient(90deg, var(--primary-color) 50%, var(--secondary-color) 80%);
   color: var(--white-color);
 }
 
