@@ -15,6 +15,8 @@ import { ProblemsComponent } from './problems/problems.component';
 import { SolutionsComponent } from './solutions/solutions.component';
 import { WhyUsComponent } from './why-us/why-us.component';
 import { CustomersComponent } from './customers/customers.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,12 @@ import { CustomersComponent } from './customers/customers.component';
     WhyUsComponent,
     CustomersComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [
+    BrowserModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    AppRoutingModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
