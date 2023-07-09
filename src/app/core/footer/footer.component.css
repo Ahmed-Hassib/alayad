@@ -10,6 +10,7 @@ footer .footer__content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
+  width: 100%;
 }
 
 @media (max-width: 960px) {
@@ -27,6 +28,7 @@ footer a {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 50px;
+  max-width: fit-content;
 }
 
 .footer__info__contact {
@@ -35,7 +37,8 @@ footer a {
   gap: 40px;
 }
 
-.footer__info__contact__icon {
+.footer__info__contact__icon,
+.footer__copy-right__social-media__icon {
   padding: 15px;
   text-align: center;
   background: #fff;
@@ -59,9 +62,6 @@ footer a {
 
 .footer__form__header {
   margin-bottom: 2rem;
-}
-
-.footer__form__header__parag {
   letter-spacing: 3px;
 }
 
@@ -74,6 +74,40 @@ form {
 form > button[type="submit"] {
   width: 150px;
   border-radius: 16px;
+}
+
+.footer__copy-right__social-media {
+  margin: 1rem auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  width: 120px;
+}
+
+.footer__copy-right__social-media__icon {
+  padding: 10px;
+  width: 55px;
+  height: 55px;
+  font-size: 1.5rem;
+  transition: all 0.3s linear;
+}
+
+.footer__copy-right__social-media__icon:has(> i.bi-facebook) {
+  color: var(--facebook-color) !important;
+}
+
+.footer__copy-right__social-media__icon:has(> i.bi-facebook):hover {
+  color: var(--white-color) !important;
+  background-color: var(--facebook-color);
+}
+
+.footer__copy-right__social-media__icon:has(> i.bi-whatsapp) {
+  color: var(--whatsapp-color) !important;
+}
+
+.footer__copy-right__social-media__icon:has(> i.bi-whatsapp):hover {
+  color: var(--white-color) !important;
+  background-color: var(--whatsapp-color);
 }
 
 .footer__copy-right {
