@@ -26,7 +26,8 @@
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
-              "node_modules/bootstrap/dist/js/bootstrap.bundle.js"
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.js",
+              "src/app/banner/banner-carousel/banner-carousel.component.js"
             ]
           },
           "configurations": {
