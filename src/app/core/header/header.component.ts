@@ -14,7 +14,7 @@ export class HeaderComponent {
   }
 
   downloadMedia(src: string = 'assets/files/Catalouge.pdf') {
-    let media_name = `catalogue.pdf`;
+    let media_name = `mam_catalogue.pdf`;
 
     this.http
       .get(src, { headers: this.headers, responseType: 'blob' })
