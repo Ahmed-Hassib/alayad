@@ -13,9 +13,16 @@ footer .footer__content {
   width: 100%;
 }
 
+@media (max-width: 425px) {
+  footer .footer__content {
+    grid-template-columns: repeat(1, 100%);
+    gap: 100px;
+  }
+}
+
 @media (max-width: 960px) {
   footer .footer__content {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(1, 100%);
     gap: 100px;
   }
 }
@@ -26,7 +33,7 @@ footer a {
 
 .footer__info {
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: repeat(1, 100%);
   gap: 50px;
   max-width: fit-content;
 }
@@ -51,7 +58,8 @@ footer a {
 
 .footer__info__contact__details {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(1, 100%);
+  width: 200px;
 }
 
 .footer__info__contact__details span:first-child {
@@ -60,21 +68,17 @@ footer a {
   font-size: 20px;
 }
 
-.footer__form__header {
-  margin-bottom: 2rem;
-  letter-spacing: 3px;
+@media (max-width: 425px) {
+  .footer__info__contact__details {
+    width: 200px;
+  }
 }
 
-form {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 20px;
+.footer__info__contact__details span {
+  /* width: 200px; */
+  text-align: justify;
 }
 
-form > button[type="submit"] {
-  width: 150px;
-  border-radius: 16px;
-}
 
 .footer__copy-right__social-media {
   margin: 1rem auto;
