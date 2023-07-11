@@ -12,7 +12,7 @@
 
 @media (max-width: 960px) {
   .why-us__content {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(1, 100%);
     text-align: center;
   }
 }
@@ -20,7 +20,7 @@
 .why-us__content__reason {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: repeat(1, 100%);
   grid-template-rows: 50px 50px;
 }
 

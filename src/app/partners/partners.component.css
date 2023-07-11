@@ -8,7 +8,7 @@
 
 @media (max-width: 960px) {
   .partner > .container {
-    grid-template-columns: repeat(1, 1fr) !important;
+    grid-template-columns: repeat(1, 100%) !important;
   }
 }
 

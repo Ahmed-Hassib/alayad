@@ -17,6 +17,8 @@ import { WhyUsComponent } from './why-us/why-us.component';
 import { CustomersComponent } from './customers/customers.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { BannerCarouselComponent } from './banner/banner-carousel/banner-carousel.component';
+import { BannerContentComponent } from './banner/banner-content/banner-content.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,8 @@ import { HttpClientModule } from '@angular/common/http';
     SolutionsComponent,
     WhyUsComponent,
     CustomersComponent,
+    BannerCarouselComponent,
+    BannerContentComponent
   ],
   imports: [
     BrowserModule,
