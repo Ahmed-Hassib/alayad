@@ -1,1 +1,65 @@
-<p>contact-us works!</p>
+<div class="footer__form" id="contact-us">
+  <div class="footer__form__header">
+    <p class="footer__form__header__parag">LET`S TALK</p>
+    <h2 class="h2 fw-bold">Contact US Here</h2>
+  </div>
+  <form
+    (ngSubmit)="onSubmit(formDirective)"
+    #formDirective="ngForm"
+    method="post"
+    class="needs-validation"
+    [formGroup]="contactForm"
+    novalidate
+  >
+    <input
+      type="text"
+      class="form-control form-control-lg"
+      placeholder="Full Name"
+      formControlName="fullname"
+      [class.is-invalid]="
+        fullname.touched && fullname.dirty && fullname.invalid
+      "
+    />
+    <input
+      type="text"
+      class="form-control form-control-lg"
+      placeholder="Mobile Number"
+      formControlName="mobile"
+      [class.is-invalid]="mobile.touched && mobile.dirty && mobile.invalid"
+    />
+    <input
+      type="text"
+      class="form-control form-control-lg"
+      placeholder="Company Name"
+      formControlName="company"
+      [class.is-invalid]="company.touched && company.dirty && company.invalid"
+    />
+    <input
+      type="text"
+      class="form-control form-control-lg"
+      placeholder="Email Address"
+      formControlName="email"
+      [class.is-invalid]="email.touched && email.dirty && email.invalid"
+    />
+    <input [formControl]="honeypot" type="hidden" />
+
+    <button [disabled]="isLoading" class="btn btn-primary" type="submit">
+      Submit
+    </button>
+  </form>
+</div>
+
+<ng-container *ngIf="submitted">
+  <div
+    class="alert alert-{{ responseMessageClass }} alert-form alert-dismissible fade show"
+    role="alert"
+  >
+    <span>{{ responseMessage }}</span>
+    <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="alert"
+      aria-label="Close"
+    ></button>
+  </div>
+</ng-container>

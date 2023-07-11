@@ -1,0 +1,23 @@
+.footer__form__header {
+  margin-bottom: 2rem;
+  letter-spacing: 3px;
+}
+
+form {
+  display: grid;
+  grid-template-columns: repeat(1, 100%);
+  gap: 20px;
+}
+
+form > button[type="submit"] {
+  width: 150px;
+  border-radius: 12px;
+}
+
+.alert-form {
+  position: fixed;
+  top: 20px;
+  left: 50px;
+  width: 350px;
+  z-index: 999999;
+}
