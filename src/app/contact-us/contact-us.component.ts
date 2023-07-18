@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import {
   FormBuilder,
   FormControl,
@@ -14,6 +14,9 @@ import {
   styleUrls: ['./contact-us.component.css'],
 })
 export class ContactUsComponent {
+  @Input() lang: string;
+  @Input() dir: string;
+
   contactForm: FormGroup;
   fullname = new FormControl('', [
     Validators.required,
@@ -32,6 +35,9 @@ export class ContactUsComponent {
   url: string;
 
   constructor(private fb: FormBuilder, private http: HttpClient) {
+    this.lang = localStorage.getItem('currentLang') || 'en';
+    this.dir = this.lang == 'ar' ? 'rtl' : 'ltr';
+
     this.contactForm = this.fb.group({
       fullname: this.fullname,
       mobile: this.mobile,
@@ -69,16 +75,14 @@ export class ContactUsComponent {
         (response) => {
           // choose the response message
           if ('result' in response && response['result'] == 'success') {
-            this.responseMessage =
-              'Thanks for for your message.. We will contact you soon!';
+            this.responseMessage = 'success msg';
             this.responseMessageClass = 'success';
             // reset form
             setTimeout(() => {
               this.resetForm(contactFormDirective);
             }, 2000);
           } else {
-            this.responseMessage =
-              'Oops! Something went wrong... Reload the page and try again.';
+            this.responseMessage = 'fail msg';
             this.responseMessageClass = 'danger';
           }
           this.contactForm.enable(); // re enable the form after a success
@@ -87,8 +91,7 @@ export class ContactUsComponent {
           console.log(response);
         },
         (error) => {
-          this.responseMessage =
-            'Oops! An error occurred... Reload the page and try again.';
+          this.responseMessage = 'fail msg';
           this.responseMessageClass = 'danger';
           this.contactForm.enable(); // re enable the form after a success
           this.submitted = true; // show the response message
@@ -97,7 +100,7 @@ export class ContactUsComponent {
         }
       );
     } else {
-      this.responseMessage = 'There are required field.';
+      this.responseMessage = 'required';
       this.responseMessageClass = 'danger';
       this.contactForm.enable(); // re enable the form after a success
       this.submitted = true; // show the response message

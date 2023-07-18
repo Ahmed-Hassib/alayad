@@ -26,6 +26,12 @@ nav.navbar {
   padding: 0.5rem 3rem;
 }
 
+.navbar .form-select {
+  padding: 0.5rem 2rem 0.5rem 1rem;
+  display: inline;
+  width: auto;
+}
+
 @keyframes header-animation {
   0%,
   100% {

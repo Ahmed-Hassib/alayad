@@ -1,5 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
@@ -8,9 +9,20 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
   headers = new HttpHeaders();
+  currentLang: string;
+  dir: string;
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private translate: TranslateService) {
     this.headers.set('Accept', 'application/pdf');
+
+    this.currentLang = localStorage.getItem('currentLang') || 'en';
+    this.changeLang(this.currentLang);
+    this.dir = this.currentLang == 'ar' ? 'rtl' : 'ltr';
+
+    this.translate.onLangChange.subscribe((param) => {
+      this.currentLang = param.lang;
+      this.dir = param.lang == 'ar' ? 'rtl' : 'ltr';
+    });
   }
 
   downloadMedia(src: string = 'assets/files/Catalouge.pdf') {
@@ -26,5 +38,10 @@ export class HeaderComponent {
         document.body.appendChild(link);
         link.click();
       });
+  }
+
+  changeLang(lang: string) {
+    this.translate.use(lang);
+    localStorage.setItem('currentLang', lang);
   }
 }

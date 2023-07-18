@@ -3,55 +3,26 @@
     <div class="problems-content">
       <div class="mb-5 problems-content__header">
         <h2 class="h2">
-          What’s the big <span class="fw-bold">problems</span> we will solve?
+          {{ "What’s the big" | translate }}&nbsp;<span class="fw-bold">{{
+            "problems" | translate
+          }}</span
+          >&nbsp;{{ "we will solve?" | translate }}
         </h2>
       </div>
       <div class="problems-content__content">
         <ul class="problems-content__list">
-          <li>
+          <li *ngFor="let problem of problems; let problemIndex = index">
             <p>
-              If you need to get all your project requirements from one place
-            </p>
-          </li>
-          <li>
-            <p>
-              If you have shortcomings and need to complete it or look for
-              alternatives
-            </p>
-          </li>
-          <li>
-            <p>
-              If you need quality, to be honored with your customer after sales
-            </p>
-          </li>
-          <li>
-            <p>
-              If you are looking for the best price from the importer directly
-            </p>
-          </li>
-          <li>
-            <p>
-              If the speed of communication, implementation and shipping will
-              make the difference with you
-            </p>
-          </li>
-          <li>
-            <p>
-              If you need to deal with an entity with papers and the company's
-              head quarters
-            </p>
-          </li>
-          <li>
-            <p>
-              If you need to deal with experienced network engineers, they will
-              help you with your choices
+              {{ problem.name | translate }}
             </p>
           </li>
         </ul>
       </div>
     </div>
     <div class="problems-buttons">
-      <a href="#contact-us" class="btn btn-outline-white">Get Quote</a>
+      <a href="#contact-us" class="btn btn-outline-white">{{
+        "get quote" | translate
+      }}</a>
     </div>
   </div>
 </div>

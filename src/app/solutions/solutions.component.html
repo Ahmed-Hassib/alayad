@@ -2,63 +2,27 @@
   <div class="container">
     <div class="solutions__header">
       <h2 class="h2">
-        Our dealing system is
-        <span class="text-primary fw-bold">so simple</span>
+        {{ "dealing" | translate }}
+        <span class="text-primary fw-bold">{{ "simple" | translate }}</span>
       </h2>
     </div>
     <ul class="solutions__content">
-      <li class="solutions__step">
-        <div class="solutions__step__padge"><i class="bi bi-check2 text-secondary"></i></div>
-        <div class="solutions__step__content">
-          <div class="solutions__step__content__header">
-            <h4 class="h4 fw-bold text-primary">Get Quote</h4>
-          </div>
-          <div class="solutions__step__content__words">
-            <p>
-              Send your order with all technical specifications then receipt
-              detailed price quotation.
-            </p>
-          </div>
+      <li
+        *ngFor="let solution of solutions; let solutionIndex = index"
+        class="solutions__step"
+      >
+        <div class="solutions__step__padge">
+          <i class="bi bi-check2 text-secondary"></i>
         </div>
-      </li>
-      <li class="solutions__step">
-        <div class="solutions__step__padge"><i class="bi bi-check2 text-secondary"></i></div>
         <div class="solutions__step__content">
           <div class="solutions__step__content__header">
-            <h4 class="h4 fw-bold text-primary">Location Visit</h4>
+            <h4 class="h4 fw-bold text-primary">
+              {{ solution.title | translate }}
+            </h4>
           </div>
           <div class="solutions__step__content__words">
             <p>
-              Schedule a date for the free site visit if you still need support
-              determining your needs.
-            </p>
-          </div>
-        </div>
-      </li>
-      <li class="solutions__step">
-        <div class="solutions__step__padge"><i class="bi bi-check2 text-secondary"></i></div>
-        <div class="solutions__step__content">
-          <div class="solutions__step__content__header">
-            <h4 class="h4 fw-bold text-primary">Contracting</h4>
-          </div>
-          <div class="solutions__step__content__words">
-            <p>
-              Starting of providing all products as fast as can with total
-              guarantee.
-            </p>
-          </div>
-        </div>
-      </li>
-      <li class="solutions__step">
-        <div class="solutions__step__padge"><i class="bi bi-check2 text-secondary"></i></div>
-        <div class="solutions__step__content">
-          <div class="solutions__step__content__header">
-            <h4 class="h4 fw-bold text-primary">After Sale Support</h4>
-          </div>
-          <div class="solutions__step__content__words">
-            <p>
-              Follow up to send products you need suddenly or any support you
-              need at implementation phase
+              {{ solution.paragraph | translate }}
             </p>
           </div>
         </div>

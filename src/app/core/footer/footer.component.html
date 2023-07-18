@@ -1,4 +1,4 @@
-<footer>
+<footer [dir]="dir">
   <div class="container">
     <div class="footer__content">
       <div class="footer__info">
@@ -7,7 +7,12 @@
             <i class="bi bi-telephone-fill"></i>
           </div>
           <div class="footer__info__contact__details">
-            <span>Phone:</span>
+            <span
+              [style.letterSpacing]="
+                currentLang == 'ar' ? '0!important' : '5px'
+              "
+              >{{ "phone" | translate }}:</span
+            >
             <span>01274999947</span>
             <span>01212877724</span>
           </div>
@@ -17,7 +22,12 @@
             <i class="bi bi-envelope-fill"></i>
           </div>
           <div class="footer__info__contact__details">
-            <span>Email:</span>
+            <span
+              [style.letterSpacing]="
+                currentLang == 'ar' ? '0!important' : '5px'
+              "
+              >{{ "email" | translate }}:</span
+            >
             <span>info@mamgroupeg.com</span>
           </div>
         </div>
@@ -26,10 +36,13 @@
             <i class="bi bi-geo-alt-fill"></i>
           </div>
           <div class="footer__info__contact__details">
-            <span>Address:</span>
-            <span class="location"
-              >Atef ELsadat st, SHebein Elkom, Elmonofya</span
+            <span
+              [style.letterSpacing]="
+                currentLang == 'ar' ? '0!important' : '5px'
+              "
+              >{{ "address" | translate }}:</span
             >
+            <span class="location">{{ "address details" | translate }}</span>
           </div>
         </div>
         <div class="footer__info__contact">
@@ -37,7 +50,12 @@
             <i class="bi bi-globe2"></i>
           </div>
           <div class="footer__info__contact__details">
-            <span>Website:</span>
+            <span
+              [style.letterSpacing]="
+                currentLang == 'ar' ? '0!important' : '5px'
+              "
+              >{{ "website" | translate }}:</span
+            >
             <span>
               <a href="https://www.mamgroupeg.com" target="_blank"
                 >www.mamgroupeg.com</a
@@ -46,7 +64,7 @@
           </div>
         </div>
       </div>
-      <app-contact-us></app-contact-us>
+      <app-contact-us [dir]="dir" [lang]="currentLang"></app-contact-us>
     </div>
   </div>
   <div class="footer__copy-right">
@@ -68,9 +86,10 @@
     </div>
     <div class="footer__copy-right__info">
       <div class="footer__copy-right__statement">
-        Copyright &copy; 2023 MAM networks solutions. All Rights Reserved
+        {{ "copyright" | translate }} &copy; 2023 {{ "mam" | translate }}.
+        {{ "rights" | translate }}
       </div>
-      <div class="footer__copy-right__brand-name">MAM Networks solutions</div>
+      <div class="footer__copy-right__brand-name">{{ "mam" | translate }}</div>
     </div>
     <div class="footer__copy-right__brand-img">
       <img

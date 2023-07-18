@@ -2,7 +2,9 @@
   <div class="container">
     <div class="customers__header">
       <h2 class="h2">
-        Our Recent <span class="text-primary fw-bold">Customers</span>
+        {{ "recent" | translate }}&nbsp;<span class="text-primary fw-bold">{{
+          "customers" | translate
+        }}</span>
       </h2>
     </div>
     <div class="customers__content">
