@@ -16,9 +16,11 @@ import { SolutionsComponent } from './solutions/solutions.component';
 import { WhyUsComponent } from './why-us/why-us.component';
 import { CustomersComponent } from './customers/customers.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { BannerCarouselComponent } from './banner/banner-carousel/banner-carousel.component';
 import { BannerContentComponent } from './banner/banner-content/banner-content.component';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 @NgModule({
   declarations: [
@@ -36,15 +38,27 @@ import { BannerContentComponent } from './banner/banner-content/banner-content.c
     WhyUsComponent,
     CustomersComponent,
     BannerCarouselComponent,
-    BannerContentComponent
+    BannerContentComponent,
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     HttpClientModule,
     AppRoutingModule,
+    TranslateModule.forRoot({
+      defaultLanguage: 'en',
+      loader: {
+        provide: TranslateLoader,
+        useFactory: createTranslateLoader,
+        deps: [HttpClient],
+      },
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
+
+export function createTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
