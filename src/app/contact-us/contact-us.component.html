@@ -1,12 +1,12 @@
 <div class="footer__form" id="contact-us">
   <div class="footer__form__header">
     <p
-      class="footer__form__header__parag text-uppercase"
+      class="footer__form__header__parag"
       [style.letterSpacing]="lang == 'ar' ? '0!important' : '5px'"
     >
-      {{ "form subtitle" | translate }}
+      {{ "form subtitle" | translate | uppercase }}
     </p>
-    <h2 class="h2 fw-bold text-capitalize">{{ "form title" | translate }}</h2>
+    <h2 class="h2 fw-bold">{{ "form title" | translate | titlecase }}</h2>
   </div>
   <form
     (ngSubmit)="onSubmit(formDirective)"

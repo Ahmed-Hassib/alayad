@@ -20,9 +20,12 @@
       </div>
     </div>
     <div class="problems-buttons">
-      <a href="#contact-us" class="btn btn-outline-white">{{
-        "get quote" | translate
-      }}</a>
+      <a
+        href="#contact-us"
+        class="btn btn-outline-white"
+        [style.padding]="currentLang == 'ar' ? '1rem 3rem' : '1rem 4rem'"
+        >{{ "get quote" | translate | titlecase }}</a
+      >
     </div>
   </div>
 </div>

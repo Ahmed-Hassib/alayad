@@ -7,20 +7,13 @@
 <!-- company statistics -->
 <app-statistics
   [attr.dir]="currentLang == 'ar' ? 'rtl' : 'ltr'"
-  [lang]="currentLang"
-  [dir]="currentLang == 'ar' ? 'rtl' : 'ltr'"
 ></app-statistics>
 <!-- our parteners -->
-<app-partners
-  [attr.dir]="currentLang == 'ar' ? 'rtl' : 'ltr'"
-  [lang]="currentLang"
-  [dir]="currentLang == 'ar' ? 'rtl' : 'ltr'"
-></app-partners>
+<app-partners [attr.dir]="currentLang == 'ar' ? 'rtl' : 'ltr'"></app-partners>
 <!-- problems we will solve -->
 <app-problems
   [attr.dir]="currentLang == 'ar' ? 'rtl' : 'ltr'"
   [lang]="currentLang"
-  [dir]="currentLang == 'ar' ? 'rtl' : 'ltr'"
 ></app-problems>
 <!-- our solutions -->
 <app-solutions

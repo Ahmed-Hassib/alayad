@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 interface Problems {
   name: string;
@@ -10,9 +11,11 @@ interface Problems {
   styleUrls: ['./problems.component.css'],
 })
 export class ProblemsComponent {
+  currentLang: string;
   problems: Problems[];
 
-  constructor() {
+  constructor(private translate: TranslateService) {
+    this.currentLang = localStorage.getItem('currentLang') || 'en';
     this.problems = [
       { name: 'problem 1' },
       { name: 'problem 2' },
@@ -22,5 +25,9 @@ export class ProblemsComponent {
       { name: 'problem 6' },
       { name: 'problem 7' },
     ];
+
+    this.translate.onLangChange.subscribe((param) => {
+      this.currentLang = param.lang;
+    });
   }
 }
