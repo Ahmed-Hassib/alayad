@@ -43,3 +43,6 @@ Thumbs.db
 
 # Docs files
 /src/docs
+
+# versions files
+/versions/
