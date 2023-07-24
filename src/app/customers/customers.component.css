@@ -6,6 +6,10 @@
   justify-content: center;
 }
 
+h2 > span {
+  display: inline-block;
+}
+
 .customers__content img {
   width: 100%;
   align-self: center;

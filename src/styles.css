@@ -10,7 +10,7 @@
   --black-color: #333333;
   --gray-color: #c8c8c8;
   --facebook-color: #3b5998;
-  --whatsapp-color: #25D366;
+  --whatsapp-color: #25d366;
 }
 
 /* for all elements */
@@ -52,7 +52,6 @@
   background-color: var(--secondary-color) !important;
 }
 
-
 /* text style */
 .text-primary {
   color: var(--primary-color) !important;
@@ -63,10 +62,5 @@
 }
 
 h2 {
-  font-size: 3rem!important;
-}
-
-/* for all spans in any header 2 */
-h2 > span {
-  display: inline-block;
+  font-size: 3rem !important;
 }
