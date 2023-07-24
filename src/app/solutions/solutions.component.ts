@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 interface Solutions {
   title: string;
@@ -13,6 +13,9 @@ interface Solutions {
 export class SolutionsComponent {
   solutions: Solutions[];
 
+  @Input() lang: string;
+  @Input() dir: string;
+
   constructor() {
     this.solutions = [
       { title: 'solution 1', paragraph: 'solution p 1' },
@@ -20,5 +23,8 @@ export class SolutionsComponent {
       { title: 'solution 3', paragraph: 'solution p 3' },
       { title: 'solution 4', paragraph: 'solution p 4' },
     ];
+
+    this.lang = localStorage.getItem('currentLang') || 'en';
+    this.dir = this.lang == 'ar' ? 'rtl' : 'ltr';
   }
 }

@@ -28,6 +28,10 @@
   margin-left: unset;
 }
 
+.solutions__content_ar .solutions__step:first-child {
+  margin-right: unset;
+}
+
 .solutions__content .solutions__step .solutions__step__padge {
   align-self: flex-start;
   font-size: 1.5rem;
@@ -56,6 +60,11 @@
   background-color: var(--secondary-color);
 }
 
+.solutions__content_ar .solutions__step .solutions__step__content::after {
+  left: unset;
+  right: 0;
+}
+
 .solutions__step__content__header {
   margin: 2rem auto;
 }
@@ -81,18 +90,25 @@
 
   .solutions__content .solutions__step .solutions__step__padge {
     align-self: self-start;
-    /* justify-self: flex-start; */
     margin: 0 -15px;
+  }
+
+  .solutions__content_ar .solutions__step .solutions__step__padge {
+    margin: 0;
   }
 
   .solutions__content .solutions__step .solutions__step__content {
     padding: 0 20px;
+    width: 100%;
   }
-
 
   .solutions__content .solutions__step .solutions__step__content::after {
     height: 350px;
     width: 2px;
     left: 32px;
+  }
+  .solutions__content_ar .solutions__step .solutions__step__content::after {
+    left: unset;
+    right: 47px;
   }
 }

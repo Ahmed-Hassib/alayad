@@ -1,4 +1,4 @@
-<div class="solutions">
+<div class="solutions" [dir]="dir">
   <div class="container">
     <div class="solutions__header">
       <h2 class="h2">
@@ -6,7 +6,7 @@
         <span class="text-primary fw-bold">{{ "simple" | translate }}</span>
       </h2>
     </div>
-    <ul class="solutions__content">
+    <ul class="solutions__content solutions__content_{{ lang }}">
       <li
         *ngFor="let solution of solutions; let solutionIndex = index"
         class="solutions__step"
