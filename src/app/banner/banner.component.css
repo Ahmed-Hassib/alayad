@@ -1,41 +1,107 @@
 .banner {
-  margin: 7rem auto;
   padding: 1rem 0;
 }
 
-.banner > .container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  align-items: center;
+.carousel-indicators {
+  margin-left: 0;
+  margin-right: 0;
+  bottom: -40px;
+  justify-content: unset;
+  top: 50%;
+  left: 30px;
+  right: 30px;
+  flex-direction: column;
 }
 
 @media (max-width: 768px) {
-  .banner {
-    margin: 3rem auto;
+  .carousel-indicators {
+    display: none;
   }
-  
-  .banner > .container {
-    grid-template-columns: repeat(1, 100%);
+
+  .carousel-inner {
+    overflow: visible;
   }
 }
 
-@media (min-width: 960px) {
-  .banner > .container {
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-  }
+.carousel-indicators [data-bs-target] {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
 }
 
-.banner-section__image {
+.carousel-item {
   position: relative;
-  overflow: hidden;
+  transition: all .5s ease-in-out;
 }
 
-.banner-image {
-  width: 820px;
-  height: 436px;
-  max-width: 100%;
-  border: 1px solid var(--black-color);
-  scale: 2.5;
+.carousel-item:is(.active) {
+  display: block;
+}
+
+.carousel-item-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: 45% 55%;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 430px) {
+  .carousel-item-container {
+    height: 450px;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-item-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.carousel-item img {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+}
+
+@media (max-width: 430px) {
+  .carousel-item img {
+    height: 200px;
+    object-fit: contain;
+  }
+}
+
+.carousel-item .carousel-caption {
+  position: relative;
+  right: unset;
+  left: unset;
+  bottom: unset;
+  text-align: unset;
+  padding: 0;
+  color: var(--black-color);
+  height: 250px;
+}
+
+@media (max-width: 768px) {
+  .carousel-item .carousel-caption {
+    grid-row: 2;
+  }
+}
+
+.carousel-item .carousel-caption h2 {
+  font-size: 55px !important;
+  font-weight: 900;
+}
+
+@media (max-width: 430px) {
+  .carousel-item .carousel-caption h2 {
+    font-size: 42px !important;
+  }
+}
+
+.carousel-item .carousel-caption .carousel-paragraph {
+  font-size: 20px;
 }

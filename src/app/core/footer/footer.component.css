@@ -3,6 +3,7 @@ footer {
   background-color: var(--secondary-color);
   min-width: 100px;
   color: var(--white-color);
+  filter: var(--secondary-color-filter);
 }
 
 footer .footer__content {
@@ -82,9 +83,9 @@ footer a {
 .footer__copy-right__social-media {
   margin: 1rem auto;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
   gap: 10px;
-  width: 120px;
+  width: 320px;
 }
 
 .footer__copy-right__social-media__icon {
@@ -112,12 +113,39 @@ footer a {
   color: var(--white-color) !important;
   background-color: var(--whatsapp-color);
 }
+.footer__copy-right__social-media__icon:has(> i.bi-instagram) {
+  color: var(--instagram-color) !important;
+}
+
+.footer__copy-right__social-media__icon:has(> i.bi-instagram):hover {
+  color: var(--white-color) !important;
+  background-color: var(--instagram-color);
+}
+
+.footer__copy-right__social-media__icon:has(> i.bi-linkedin) {
+  color: var(--linkedin-color) !important;
+}
+
+.footer__copy-right__social-media__icon:has(> i.bi-linkedin):hover {
+  color: var(--white-color) !important;
+  background-color: var(--linkedin-color);
+}
+
+.footer__copy-right__social-media__icon:has(> i.bi-snapchat) {
+  color: var(--snapchat-color) !important;
+}
+
+.footer__copy-right__social-media__icon:has(> i.bi-snapchat):hover {
+  color: var(--white-color) !important;
+  background-color: var(--snapchat-color);
+}
 
 .footer__copy-right {
   margin-top: 3rem;
   padding: 1rem 0;
   width: 100%;
   text-align: center;
+  background-color: var(--black-color);
 }
 
 .footer__copy-right__statement {
@@ -130,4 +158,9 @@ footer a {
 
 .footer__copy-right__brand-img {
   margin-top: 1rem;
+}
+.footer__copy-right__brand-img img {
+  height: 120px;
+  width: 120px;
+  object-fit: contain;
 }

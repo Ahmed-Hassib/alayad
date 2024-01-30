@@ -1,0 +1,27 @@
+.preloader {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: #e1e1e1;
+  z-index: 9999;
+}
+
+
+.preloader>.preloader-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.preloader .spinner-grow {
+  background: #0d6efd;
+}
+
+.preloader .spinner-border {
+  border: 0.25rem solid transparent;
+  border-right-color: #0d6efd;
+}

@@ -1,5 +1,5 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -12,6 +12,8 @@ export class HeaderComponent {
   currentLang: string;
   dir: string;
 
+  @Output() preloaderStatus = new EventEmitter<boolean>();
+
   constructor(private http: HttpClient, private translate: TranslateService) {
     this.headers.set('Accept', 'application/pdf');
 
@@ -22,6 +24,8 @@ export class HeaderComponent {
     this.translate.onLangChange.subscribe((param) => {
       this.currentLang = param.lang;
       this.dir = param.lang == 'ar' ? 'rtl' : 'ltr';
+      // change preloader status
+      this.changePreloader(true);
     });
   }
 
@@ -43,5 +47,9 @@ export class HeaderComponent {
   changeLang(lang: string) {
     this.translate.use(lang);
     localStorage.setItem('currentLang', lang);
+  }
+
+  changePreloader(value: boolean) {
+    this.preloaderStatus.emit(value);
   }
 }

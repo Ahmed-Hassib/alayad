@@ -1,7 +1,11 @@
+.customers {
+  margin: 3rem 0;
+}
+
 .customers__content {
   margin: 4rem 2rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(65px, 1fr));
   gap: 30px;
   justify-content: center;
 }

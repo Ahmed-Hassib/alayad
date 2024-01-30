@@ -2,12 +2,17 @@ nav.navbar {
   border-bottom: 1px solid var(--gray-color);
 }
 
+.navbar-brand .navbar-brand-img {
+  object-fit: contain;
+  width: 40px;
+  height: 70px;
+}
+
 .navbar-nav .nav-link {
   position: relative;
 }
 
-.navbar-nav .nav-link.active,
-.navbar-nav .nav-link.show {
+.navbar-nav .nav-link:where(.active, .show) {
   color: var(--primary-color);
 }
 
@@ -30,6 +35,7 @@ nav.navbar {
   padding: 0.5rem 2rem 0.5rem 1rem;
   display: inline;
   width: auto;
+  border-radius: 0;
 }
 
 @keyframes header-animation {

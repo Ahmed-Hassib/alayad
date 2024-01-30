@@ -13,8 +13,14 @@
               "
               >{{ "phone" | translate | titlecase }}:</span
             >
-            <span>01274999947</span>
-            <span>01212877724</span>
+            <span>
+              <img src="assets/flags/4x3/eg.svg" width="25" alt="" />
+              +201274999947
+            </span>
+            <span>
+              <img src="assets/flags/4x3/om.svg" width="25" alt="" />
+              +96877056562
+            </span>
           </div>
         </div>
         <div class="footer__info__contact">
@@ -28,21 +34,37 @@
               "
               >{{ "email" | translate | titlecase }}:</span
             >
-            <span>info@mamgroupeg.com</span>
+            <span>info@al-ayadcom</span>
           </div>
         </div>
         <div class="footer__info__contact">
           <div class="footer__info__contact__icon">
-            <i class="bi bi-geo-alt-fill"></i>
+            <!-- <i class="bi bi-geo-alt-fill"></i> -->
+            <img src="assets/flags/4x3/eg.svg" alt="" />
           </div>
           <div class="footer__info__contact__details">
             <span
               [style.letterSpacing]="
                 currentLang == 'ar' ? '0!important' : '5px'
               "
-              >{{ "address" | translate | titlecase }}:</span
+              >{{ "egypt" | translate | uppercase }}:</span
             >
-            <span class="location">{{ "address details" | translate }}</span>
+            <span class="location">{{ "address details eg" | translate }}</span>
+          </div>
+        </div>
+        <div class="footer__info__contact">
+          <div class="footer__info__contact__icon">
+            <!-- <i class="bi bi-geo-alt-fill"></i> -->
+            <img src="assets/flags/4x3/om.svg" alt="" />
+          </div>
+          <div class="footer__info__contact__details">
+            <span
+              [style.letterSpacing]="
+                currentLang == 'ar' ? '0!important' : '5px'
+              "
+              >{{ "oman" | translate | uppercase }}:</span
+            >
+            <span class="location">{{ "address details om" | translate }}</span>
           </div>
         </div>
         <div class="footer__info__contact">
@@ -57,8 +79,8 @@
               >{{ "website" | translate | titlecase }}:</span
             >
             <span>
-              <a href="https://www.mamgroupeg.com" target="_blank"
-                >www.mamgroupeg.com</a
+              <a href="https://www.al-ayad.com" target="_blank"
+                >www.al-ayad.com</a
               >
             </span>
           </div>
@@ -70,34 +92,49 @@
   <div class="footer__copy-right">
     <div class="footer__copy-right__social-media">
       <a
-        href="https://web.facebook.com/mamnetworks"
+        href=""
         class="footer__copy-right__social-media__icon"
         target="_blank"
       >
         <i class="bi bi-facebook"></i>
       </a>
       <a
-        href="https://wa.me/201212877724"
+        href=""
         class="footer__copy-right__social-media__icon"
         target="_blank"
       >
         <i class="bi bi-whatsapp"></i>
       </a>
+      <a
+        href=""
+        class="footer__copy-right__social-media__icon"
+        target="_blank"
+      >
+        <i class="bi bi-instagram"></i>
+      </a>
+      <a
+        href=""
+        class="footer__copy-right__social-media__icon"
+        target="_blank"
+      >
+        <i class="bi bi-linkedin"></i>
+      </a>
+      <a
+        href=""
+        class="footer__copy-right__social-media__icon"
+        target="_blank"
+      >
+        <i class="bi bi-snapchat"></i>
+      </a>
     </div>
     <div class="footer__copy-right__info">
       <div class="footer__copy-right__statement">
-        {{ "copyright" | translate }} &copy; 2023 {{ "mam" | translate }}.
+        {{ "copyright" | translate }} &copy; 2023 al-ayad.
         {{ "rights" | translate }}
       </div>
-      <div class="footer__copy-right__brand-name">{{ "mam" | translate }}</div>
     </div>
     <div class="footer__copy-right__brand-img">
-      <img
-        src="assets/logos-png/logo-01.png"
-        alt="company logo"
-        width="100"
-        height="50"
-      />
+      <img src="assets/logos/alayad-logo.png" alt="company logo" />
     </div>
   </div>
 </footer>

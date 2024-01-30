@@ -1,10 +1,56 @@
-<div class="banner">
+<div
+  id="mainCarousel"
+  class="banner carousel carousel-dark slide"
+  data-bs-ride="carousel"
+>
   <div class="container">
-    <div class="banner-section__words">
-      <app-banner-content></app-banner-content>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="18000">
+        <div class="carousel-item-container">
+          <div class="carousel-caption">
+            <h2 class="h2">
+              {{ "about alayad" | translate | uppercase }}
+            </h2>
+            <p class="carousel-paragraph">{{ "about company statement" | translate }}</p>
+          </div>
+          <div class="carousel-image">
+            <img src="assets/images/banner_4.png" class="d-block" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="15000">
+        <div class="carousel-item-container">
+          <div class="carousel-caption">
+            <h2 class="h2">{{ "our vision" | translate | uppercase }}</h2>
+            <p class="carousel-paragraph">{{ "our vision statement" | translate }}</p>
+          </div>
+          <div class="carousel-image">
+            <img src="assets/images/banner_2.jpg" class="d-block" alt="..." />
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="banner-section__image">
-      <app-banner-carousel></app-banner-carousel>
+    <div class="carousel-indicators">
+      <button
+        type="button"
+        data-bs-target="#mainCarousel"
+        data-bs-slide-to="0"
+        class="active"
+        aria-current="true"
+        aria-label="Slide 1"
+      ></button>
+      <button
+        type="button"
+        data-bs-target="#mainCarousel"
+        data-bs-slide-to="1"
+        aria-label="Slide 2"
+      ></button>
+      <!-- <button
+        type="button"
+        data-bs-target="#mainCarousel"
+        data-bs-slide-to="2"
+        aria-label="Slide 3"
+      ></button> -->
     </div>
   </div>
 </div>

@@ -17,10 +17,12 @@ import { WhyUsComponent } from './why-us/why-us.component';
 import { CustomersComponent } from './customers/customers.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { BannerCarouselComponent } from './banner/banner-carousel/banner-carousel.component';
-import { BannerContentComponent } from './banner/banner-content/banner-content.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { PreloaderComponent } from './core/preloader/preloader.component';
+import { CoreValuesComponent } from './core-values/core-values.component';
+import { ServicesComponent } from './services/services.component';
+import { ItIntegrationComponent } from './it-integration/it-integration.component';
 
 @NgModule({
   declarations: [
@@ -37,8 +39,10 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
     SolutionsComponent,
     WhyUsComponent,
     CustomersComponent,
-    BannerCarouselComponent,
-    BannerContentComponent,
+    PreloaderComponent,
+    CoreValuesComponent,
+    ServicesComponent,
+    ItIntegrationComponent,
   ],
   imports: [
     BrowserModule,

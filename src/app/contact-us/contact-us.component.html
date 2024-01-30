@@ -16,36 +16,65 @@
     [formGroup]="contactForm"
     novalidate
   >
-    <input
-      type="text"
-      class="form-control form-control-lg"
-      placeholder="{{ 'fullname' | translate }}"
-      formControlName="fullname"
-      [class.is-invalid]="
-        fullname.touched && fullname.dirty && fullname.invalid
-      "
-    />
-    <input
-      type="text"
-      class="form-control form-control-lg"
-      placeholder="{{ 'phone' | translate }}"
-      formControlName="mobile"
-      [class.is-invalid]="mobile.touched && mobile.dirty && mobile.invalid"
-    />
-    <input
-      type="text"
-      class="form-control form-control-lg"
-      placeholder="{{ 'company' | translate }}"
-      formControlName="company"
-      [class.is-invalid]="company.touched && company.dirty && company.invalid"
-    />
-    <input
-      type="text"
-      class="form-control form-control-lg"
-      placeholder="{{ 'email' | translate }}"
-      formControlName="email"
-      [class.is-invalid]="email.touched && email.dirty && email.invalid"
-    />
+    <div
+      class="form-floating {{
+        lang == 'ar' ? 'form-floating-right' : 'form-floating-left'
+      }}"
+    >
+      <input
+        type="text"
+        class="form-control"
+        placeholder="{{ 'fullname' | translate }}"
+        formControlName="fullname"
+        id="fullname"
+        [class.is-invalid]="
+          fullname.touched && fullname.dirty && fullname.invalid
+        "
+      />
+      <label for="fullname">{{ "fullname" | translate | titlecase }}</label>
+    </div>
+    <div
+      class="form-floating {{
+        lang == 'ar' ? 'form-floating-right' : 'form-floating-left'
+      }}"
+    >
+      <input
+        type="text"
+        class="form-control"
+        placeholder="{{ 'phone' | translate }}"
+        formControlName="mobile"
+        [class.is-invalid]="mobile.touched && mobile.dirty && mobile.invalid"
+      />
+      <label for="fullname">{{ "phone" | translate | titlecase }}</label>
+    </div>
+    <div
+      class="form-floating {{
+        lang == 'ar' ? 'form-floating-right' : 'form-floating-left'
+      }}"
+    >
+      <input
+        type="text"
+        class="form-control"
+        placeholder="{{ 'company' | translate }}"
+        formControlName="company"
+        [class.is-invalid]="company.touched && company.dirty && company.invalid"
+      />
+      <label for="fullname">{{ "company" | translate | titlecase }}</label>
+    </div>
+    <div
+      class="form-floating {{
+        lang == 'ar' ? 'form-floating-right' : 'form-floating-left'
+      }}"
+    >
+      <input
+        type="text"
+        class="form-control"
+        placeholder="{{ 'email' | translate }}"
+        formControlName="email"
+        [class.is-invalid]="email.touched && email.dirty && email.invalid"
+      />
+      <label for="fullname">{{ "email" | translate | titlecase }}</label>
+    </div>
     <input [formControl]="honeypot" type="hidden" />
 
     <button
@@ -60,9 +89,9 @@
 
 <ng-container *ngIf="submitted">
   <div
-    class="alert alert-{{
-      responseMessageClass
-    }} alert-form alert-dismissible fade show"
+    class="alert alert-{{ responseMessageClass }} alert-form {{
+      lang == 'ar' ? 'alert-form-right' : 'alert-form-left'
+    }} alert-dismissible fade show"
     role="alert"
     [style.paddingLeft]="lang == 'ar' ? '3rem' : '1rem'"
     [style.paddingRight]="lang == 'ar' ? '1rem' : '3rem'"

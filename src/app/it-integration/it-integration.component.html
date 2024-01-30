@@ -1,0 +1,123 @@
+<div class="itintegration">
+  <div class="container">
+    <header class="itintegration__header">
+      <h2 class="h2 fw-bold text-danger">
+        {{ "service header 1" | translate | uppercase }}
+      </h2>
+    </header>
+
+    <div class="itintegration__container">
+      <div class="itintegraion__step">
+        <div class="step__icon mb-3">
+          <img src="assets/images/networking.svg" alt="" />
+        </div>
+        <header class="step__header">
+          <h4 class="fw-bold">{{ "lan sw header" | translate | uppercase }}</h4>
+        </header>
+        <div class="step__content">
+          {{ "lan sw statement" | translate }}
+        </div>
+      </div>
+      <div class="itintegraion__step">
+        <div class="step__icon mb-3">
+          <img
+            src="assets/images/wireless-router-1.svg"
+            alt=""
+            style="filter: var(--primary-color-filter)"
+          />
+        </div>
+        <header class="step__header">
+          <h4 class="fw-bold">
+            {{ "wireless header" | translate | uppercase }}
+          </h4>
+        </header>
+        <div class="step__content">
+          {{ "wireless statement" | translate }}
+        </div>
+      </div>
+      <div class="itintegraion__step">
+        <div class="step__icon mb-3">
+          <img src="assets/images/sdwan.svg" alt="" />
+        </div>
+        <header class="step__header">
+          <h4 class="fw-bold">{{ "sdwan header" | translate | uppercase }}</h4>
+        </header>
+        <div class="step__content">
+          {{ "sdwan statement" | translate }}
+        </div>
+      </div>
+      <div class="itintegraion__step">
+        <div class="step__icon mb-3">
+          <img src="assets/images/remote-wireless.svg" alt="" />
+        </div>
+        <header class="step__header">
+          <h4 class="fw-bold">
+            {{ "remote wireless header" | translate | uppercase }}
+          </h4>
+        </header>
+        <div class="step__content">
+          {{ "remote wireless statement" | translate }}
+        </div>
+      </div>
+      <div class="itintegraion__step">
+        <div class="step__icon mb-3">
+          <img src="assets/images/cyber-security.svg" alt="" />
+        </div>
+        <header class="step__header">
+          <h4 class="fw-bold">
+            {{ "cyber security header" | translate | uppercase }}
+          </h4>
+        </header>
+        <div class="step__content">
+          {{ "cyber security statement" | translate }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="promoted-products">
+  <div class="container">
+    <header class="promoted-products__header">
+      <h2 class="h2 fw-bold text-danger">
+        {{ "promoted products" | translate : { year: "2024" } | uppercase }}
+      </h2>
+      <h4 class="h4">
+        <span>{{ "moto" | translate : { year: "2024" } }}:&nbsp;</span>
+        <span class="text-primary">{{ "moto paragraph" | translate }}</span>
+      </h4>
+    </header>
+
+    <div
+      class="promoted-products__content promoted-products__content_{{ lang }}"
+    >
+      <ng-container
+        *ngFor="let product of products; let productIndex = index"
+        class="products__step"
+      >
+        <div class="products__step__content">
+          <div class="step__padge">
+            <img
+              src="assets/vendors/{{ product.img_name }}.{{ product.img_ext }}"
+              alt=""
+            />
+          </div>
+          <div class="step__header">
+            <h4 class="h4 fw-bold">
+              {{ product.title | translate | titlecase }}
+            </h4>
+          </div>
+          <div class="step__words">
+            <ul>
+              <ng-container
+                *ngFor="let listItem of product.list; let listItemIndex = index"
+              >
+                <li>{{ listItem["list_title"] | translate }}</li>
+              </ng-container>
+            </ul>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>

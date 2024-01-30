@@ -48,7 +48,8 @@ export class ContactUsComponent {
 
     this.responseMessage = '';
     this.responseMessageClass = '';
-    this.url = 'put your account link here';
+    this.url =
+      'https://script.google.com/macros/s/AKfycbyaBFUfin9oz9Fj5QBCnNoJ27pzrCAy_nyfkNUCM56AXL4qyFv7BTYMJVopwNkqPeuGRQ/exec';
   }
 
   getFormControls() {

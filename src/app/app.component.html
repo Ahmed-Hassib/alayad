@@ -1,5 +1,7 @@
 <!-- header -->
-<app-header></app-header>
+<app-header (preloaderStatus)="changeLoading($event)"></app-header>
+<!-- preloader -->
+<app-preloader *ngIf="loading"></app-preloader>
 <!-- page content -->
 <router-outlet></router-outlet>
 <!-- footer -->

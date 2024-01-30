@@ -1,0 +1,51 @@
+.itintegration {
+  margin: 3rem 0;
+}
+
+.itintegration__container {
+  position: relative;
+  margin: 3rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+
+.itintegraion__step {
+  position: relative;
+}
+
+.itintegraion__step .step__icon img {
+  width: 100px;
+}
+
+.promoted-products {
+  margin: 3rem 0;
+}
+
+.promoted-products__content {
+  margin-top: 4rem;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+.step__padge img {
+  width: 120px;
+  height: 50px;
+  object-fit: contain;
+  aspect-ratio: 4/3;
+}
+
+.step__header {
+  margin: 2rem 0;
+}
+
+.step__words ul {
+  list-style: lower-roman;
+}
+
+.step__words ul li::first-letter {
+  text-transform: capitalize;
+}

@@ -5,7 +5,7 @@
 .why-us__content {
   margin: 5rem auto 0;
   position: relative;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   display: grid;
   gap: 30px;
 }
@@ -13,23 +13,22 @@
 @media (max-width: 960px) {
   .why-us__content {
     grid-template-columns: repeat(1, 100%);
-    text-align: center;
   }
 }
 
-.why-us__content__reason {
+.why-us__content__reason,
+.why-us__content__reason__icon {
   position: relative;
-  display: grid;
-  grid-template-columns: repeat(1, 100%);
-  grid-template-rows: 50px 50px;
 }
 
-.why-us__content__reason .why-us__content__reason__icon svg,
-.why-us__content__reason .why-us__content__reason__icon svg g {
-  width: 40px;
-  fill: var(--secondary-color);
+.why-us__content__reason__header {
+  margin-bottom: 2rem;
 }
 
-.why-us__content__reason .why-us__content__reason__parag .lead {
+.why-us__content__reason__icon img {
+  width: 100px;
+}
+
+.why-us__content__reason__parag .lead {
   font-size: 1rem;
 }

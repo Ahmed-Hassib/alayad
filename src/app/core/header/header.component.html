@@ -6,10 +6,9 @@
       class="{{ currentLang == 'ar' ? 'me-0 ms-3' : 'me-3 ms-0' }}"
     >
       <img
-        src="assets/logos-png/logo-01.png"
+        class="navbar-brand-img"
+        src="assets/logos/alayad-logo.png"
         alt="company logo"
-        width="80"
-        height="40"
       />
     </a>
     <button
@@ -36,7 +35,7 @@
           <a
             class="nav-link active"
             aria-current="page"
-            routerLink="/"
+            routerLink=""
             routerLinkActive="active"
             ariaCurrentWhenActive="page"
             [routerLinkActiveOptions]="{ exact: true }"
@@ -45,36 +44,25 @@
             {{ "home" | translate }}</a
           >
         </li>
-        <li class="nav-item dropdown">
-          <a
-            class="nav-link dropdown-toggle"
-            href="#"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            {{ "our product" | translate }}
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="#services">
+            {{ "our services" | translate }}
           </a>
-          <ul
-            class="dropdown-menu-{{
-              currentLang == 'ar' ? 'end' : 'start'
-            }} dropdown-menu"
-          >
-            <li>
-              <button
-                class="dropdown-item"
-                (click)="downloadMedia('assets/files/Catalogue_new_2023.pdf')"
-              >
-                <i class="bi bi-download"></i>
-                {{ "download catalogue" | translate | titlecase }}
-              </button>
-            </li>
-          </ul>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="#why-us">
+            {{ "offers" | translate }}
+          </a>
+        </li> -->
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="#partners">
+            {{ "our partners" | translate }}
+          </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="#why-us">{{
-            "offers" | translate
-          }}</a>
+          <a class="nav-link" aria-current="page" href="#customers">
+            {{ "our customers" | translate }}
+          </a>
         </li>
       </ul>
       <div>
@@ -85,8 +73,12 @@
           (change)="changeLang(lang.value)"
           #lang
         >
-          <option value="ar" [selected]="currentLang == 'ar'">العربية</option>
-          <option value="en" [selected]="currentLang == 'en'">English</option>
+          <option value="ar" [selected]="currentLang == 'ar'">
+            {{ "ar" | translate | titlecase }}
+          </option>
+          <option value="en" [selected]="currentLang == 'en'">
+            {{ "en" | translate | titlecase }}
+          </option>
         </select>
 
         <a

@@ -9,6 +9,20 @@ form {
   gap: 20px;
 }
 
+.form-floating-right > label {
+  right: 10px;
+  left: unset;
+}
+
+.form-floating-left > label {
+  left: 0;
+  right: unset;
+}
+
+.form-floating > label {
+  color: #000;
+}
+
 form > button[type="submit"] {
   width: 150px;
   border-radius: 12px;
@@ -17,9 +31,30 @@ form > button[type="submit"] {
 .alert-form {
   position: fixed;
   top: 20px;
-  left: 50px;
   width: 350px;
-  z-index: 999999;
+  z-index: 999;
+}
+
+.alert-form-left {
+  right: unset;
+  left: 20px;
+}
+
+.alert-form-right {
+  left: unset;
+  right: 20px;
+}
+
+@media (max-width: 425px) {
+  .alert-form {
+    width: 300px;
+  }
+  .alert-form-right {
+    right: 10px;
+  }
+  .alert-form-left {
+    left: 10px;
+  }
 }
 
 form input::placeholder {

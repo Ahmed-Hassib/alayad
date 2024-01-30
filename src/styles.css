@@ -3,14 +3,21 @@
 
 /* root variables */
 :root {
-  --primary-color: #ce2828;
-  /* --secondary-color: #770808; */
-  --secondary-color: #0072bc;
+  --primary-color: #0072bc;
+  --primary-color-filter: invert(28%) sepia(97%) saturate(5134%) hue-rotate(190deg) brightness(95%) contrast(101%);
+  --secondary-color: #00a8ead9;
+  --red-color: #ce2828;
+  --red-color-filter: invert(22%) sepia(73%) saturate(3135%) hue-rotate(352deg) brightness(90%) contrast(96%);
   --white-color: #ffffff;
   --black-color: #333333;
+  --green-color: #11ff00;
+  --green-color-filter: invert(68%) sepia(56%) saturate(5714%) hue-rotate(77deg) brightness(123%) contrast(122%);;
   --gray-color: #c8c8c8;
   --facebook-color: #3b5998;
   --whatsapp-color: #25d366;
+  --instagram-color: #E4405F;
+  --linkedin-color: #0077b5;
+  --snapchat-color: #FFFC00;
 }
 
 /* for all elements */
@@ -61,6 +68,29 @@
   color: var(--secondary-color) !important;
 }
 
+.text-danger {
+  color: var(--red-color) !important;
+}
+
 h2 {
   font-size: 3rem !important;
+}
+
+/* colores section */
+.colored-section {
+  margin: 3rem auto;
+  padding: 4rem 0;
+  background: linear-gradient(
+    90deg,
+    var(--primary-color) 50%,
+    var(--secondary-color) 80%
+  );
+  color: var(--white-color);
+}
+
+
+@media (max-width: 425px) {
+  header h2.h2 {
+    font-size: 32px !important;
+  }
 }
