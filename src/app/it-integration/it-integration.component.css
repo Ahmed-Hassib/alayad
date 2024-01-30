@@ -42,10 +42,6 @@
   margin: 2rem 0;
 }
 
-.step__words ul {
-  list-style: lower-roman;
-}
-
 .step__words ul li::first-letter {
   text-transform: capitalize;
 }

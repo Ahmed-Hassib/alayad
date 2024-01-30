@@ -94,3 +94,7 @@ h2 {
     font-size: 32px !important;
   }
 }
+
+ul {
+  list-style-image: url(/assets/images/check2.svg);
+}

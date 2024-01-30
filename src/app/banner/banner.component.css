@@ -32,7 +32,7 @@
 
 .carousel-item {
   position: relative;
-  transition: all .5s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
 .carousel-item:is(.active) {
